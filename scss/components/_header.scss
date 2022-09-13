@@ -1,0 +1,63 @@
+.header {
+  background-color: $bgDark;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &-title {
+      color: $primary;
+
+      &:hover::after {
+        content: 'inicio';
+        margin-left: 8px;
+        font-size: 14px;
+        color: $fontLight;
+      }
+    }
+
+    &-navbar {
+      display: flex;
+      align-items: center;
+
+      li {
+        margin: 0 15px;
+        transition: $transition;
+
+        &:last-child {
+          border: 1px solid $primary;
+          border-radius: $borderRadius;
+          padding: 10px;
+          margin-right: 0;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        a {
+          color: $fontLight;
+          font-weight: bold;
+          transition: $transition;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $bpMedium) {
+  .header__content-navbar {
+    display: none;
+  }
+}
