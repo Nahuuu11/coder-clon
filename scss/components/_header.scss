@@ -6,11 +6,13 @@
   z-index: 1;
 
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    @extend .container;
+    @include templateFlex(space-between, true);
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // max-width: 1200px;
+    // margin: 0 auto;
 
     &-title {
       color: $primary;
