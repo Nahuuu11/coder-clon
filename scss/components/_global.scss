@@ -33,6 +33,16 @@ ul {
   margin: 0 auto;
 }
 
+.templateButton {
+  display: inline-block;
+  color: $fontLight;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  transition: $transition;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 // mixins
 @mixin templateGrid($columns) {
   display: grid;
