@@ -20,6 +20,7 @@
       }
     }
 
+    // desktop
     &-navbar {
       display: flex;
       align-items: center;
@@ -50,11 +51,54 @@
         }
       }
     }
+
+    // mobile
+    &-navbar-mobile {
+      display: none;
+
+      i {
+        font-size: 35px;
+        color: $fontLight;
+      }
+
+      &:hover > ul {
+        display: block;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        background-color: $bgDark;
+
+        li {
+          padding: 25px 0;
+          text-align: center;
+
+          a {
+            color: $fontLight;
+            font-weight: bold;
+          }
+
+          &:nth-child(even) {
+            background-color: #1a2748;
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: $bpMedium) {
-  .header__content-navbar {
-    display: none;
+  .header__content {
+    &-navbar {
+      display: none;
+    }
+
+    &-navbar-mobile {
+      display: block;
+    }
   }
 }
